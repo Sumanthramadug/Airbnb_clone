@@ -15,7 +15,7 @@ const ResetPassword = () => {
     e.preventDefault();
     try {
       const { data } = await axios.post(
-        'http://localhost:8000/users/forgotPassword',
+        'https://airbnb-clone-3xan.onrender.com/users/forgotPassword',
         { email },
         { withCredentials: true }
       );
@@ -33,7 +33,7 @@ const ResetPassword = () => {
   const checkOtpHandler = async () => {
     try {
       const { data } = await axios.post(
-        'http://localhost:8000/users/verifyotp',
+        'https://airbnb-clone-3xan.onrender.com/users/verifyotp',
         { email, otp },
         { withCredentials: true }
       );
